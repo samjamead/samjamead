@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Params } from '@/lib/types';
 import { site_title } from '@/lib/constants';
+import './posts.css';
 
 export async function generateStaticParams() {
   const postList = await getBlogPostList();
@@ -32,8 +33,11 @@ async function BlogPost({ params }: { params: Params }) {
   return (
     <article className='max-w-4xl mx-auto py-24'>
       <div>
-        <p className='mb-8'>{frontmatter.title}</p>
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <h1 className='mb-8 text-lg font-bold'>{frontmatter.title}</h1>
+        <div
+          className='post-wrapper'
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
         <hr className='my-12 border-gray-400' />
         <p>
           &larr; <Link href='/'>Home</Link>

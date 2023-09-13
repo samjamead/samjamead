@@ -1,0 +1,19 @@
+.post-wrapper {
+  h2,
+  h3 {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    max-width: 37rem;
+  }
+}
