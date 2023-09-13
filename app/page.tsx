@@ -9,14 +9,18 @@ export default async function Home() {
       <p className='mb-8'>A simple list of posts:</p>
       <ul>
         {postList &&
-          postList.map((post) => (
-            <li key={post.slug} className='mb-6'>
-              <span className='text-sm'>{post.date}</span>
-              <Link href={post.slug} className='ml-4 underline'>
-                {post.title}
-              </Link>
-            </li>
-          ))}
+          postList.map((post) => {
+            let path = `/posts/${post.slug}`;
+
+            return (
+              <li key={post.slug} className='mb-6'>
+                <span className='text-sm'>{post.date}</span>
+                <Link href={path} className='ml-4 underline'>
+                  {post.title}
+                </Link>
+              </li>
+            );
+          })}
       </ul>
       <p>
         -- <br /> Thus endeth the list

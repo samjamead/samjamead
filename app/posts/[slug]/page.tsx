@@ -1,13 +1,22 @@
-import { loadBlogPost } from '@/lib/blog-helpers';
+import { getBlogPostList, loadBlogPost } from '@/lib/blog-helpers';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Params } from '@/lib/types';
+import { site_title } from '@/lib/constants';
+
+export async function generateStaticParams() {
+  const postList = await getBlogPostList();
+
+  return postList.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export async function generateMetadata({ params }: { params: Params }) {
   const postMeta = await loadBlogPost(params.slug);
 
   return {
-    title: postMeta?.frontmatter?.title || 'Not Found',
+    title: postMeta?.frontmatter?.title || site_title,
   };
 }
 
