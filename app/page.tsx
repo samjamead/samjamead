@@ -6,7 +6,6 @@ export default async function Home() {
 
   return (
     <main className='max-w-4xl w-full mx-auto font-mono flex min-h-screen flex-col justify-between py-24'>
-      <p className='mb-8'>A simple list of posts:</p>
       <ul>
         {postList &&
           postList.map((post) => {
@@ -22,9 +21,7 @@ export default async function Home() {
             );
           })}
       </ul>
-      <p>
-        -- <br /> Thus endeth the list
-      </p>
+      <p>-- Ends --</p>
     </main>
   );
 }
