@@ -5,13 +5,15 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { PostFrontmatter } from '@/lib/types';
 
+const posts_directory = '/_posts';
+
 export async function getBlogPostList(): Promise<PostFrontmatter[]> {
-  const fileNames = await readDirectory('/posts');
+  const fileNames = await readDirectory(posts_directory);
 
   const blogPosts = [];
 
   for (let fileName of fileNames) {
-    const rawContent = await readFile(`/posts/${fileName}`);
+    const rawContent = await readFile(`${posts_directory}/${fileName}`);
 
     const { data: frontmatter } = matter(rawContent);
 
@@ -28,7 +30,7 @@ export async function loadBlogPost(slug: string) {
   let rawContent;
 
   try {
-    rawContent = await readFile(`/posts/${slug}.md`);
+    rawContent = await readFile(`${posts_directory}/${slug}.md`);
   } catch (err) {
     return null;
   }
