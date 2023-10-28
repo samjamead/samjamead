@@ -76,13 +76,14 @@ export default function AppHeader() {
         {navItems.map((item, index) => {
           return (
             <li key={index}>
-              {item.target ? (
-                <a href={item.link} target='_blank'>
+              {
+                <a
+                  href={item.link}
+                  target={item.target ? item.target : '_self'}
+                >
                   {item.text}
                 </a>
-              ) : (
-                <Link href={item.link}>{item.text}</Link>
-              )}
+              }
             </li>
           );
         })}
