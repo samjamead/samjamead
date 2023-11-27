@@ -69,8 +69,9 @@ export const navItems = [
 export default function AppHeader() {
   return (
     <nav className='flex items-center justify-between max-w-4xl mx-auto py-4 text-sm'>
-      <div>
+      <div className='flex gap-8'>
         <Link href='/'>sjam</Link>
+        <Link href='/mountains'>mountains &uarr;</Link>
       </div>
       <ul className='flex items-center justify-end gap-6'>
         {navItems.map((item, index) => {
