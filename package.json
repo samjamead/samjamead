@@ -1,29 +1,27 @@
 {
-  "name": "samjamead",
+  "name": "create-next-app-july-25",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.6.0",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
-    "@vercel/analytics": "^1.0.2",
-    "autoprefixer": "10.4.15",
-    "eslint": "8.49.0",
-    "eslint-config-next": "^14.0.1",
-    "gray-matter": "^4.0.3",
-    "next": "^14.0.1",
-    "postcss": "^8.4.31",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "remark": "^14.0.3",
-    "remark-html": "^15.0.2",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.2.2"
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.4.1"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.1",
+    "@eslint/eslintrc": "^3"
   }
 }

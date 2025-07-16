@@ -1,27 +1,11 @@
-import Link from 'next/link';
-import { getBlogPostList } from '@/lib/blog-helpers';
+import Image from 'next/image';
 
-export default async function Home() {
-  const postList = await getBlogPostList();
-
+export default function Home() {
   return (
-    <main className='max-w-4xl w-full mx-auto font-mono flex min-h-screen flex-col justify-between py-24'>
-      <ul>
-        {postList &&
-          postList.map((post) => {
-            let path = `/posts/${post.slug}`;
-
-            return (
-              <li key={post.slug} className='mb-6'>
-                <span className='text-sm'>{post.date}</span>
-                <Link href={path} className='ml-4 underline'>
-                  {post.title}
-                </Link>
-              </li>
-            );
-          })}
-      </ul>
-      <p>-- Ends --</p>
-    </main>
+    <div className='font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'>
+      <main className='flex flex-col gap-[32px] row-start-2 items-center sm:items-start'>
+        <h1 className='text-4xl font-bold'>Hello World</h1>
+      </main>
+    </div>
   );
 }
