@@ -1,6 +1,30 @@
 import { cn } from "@/lib/cn";
 
-export default function StyledLink({
+export const InlineHeading = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return <span className={cn("text-fuchsia-300", className)}>{children}</span>;
+};
+
+export const InlineComment = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <span className={cn("font-medium text-emerald-300/90", className)}>
+      {children}
+    </span>
+  );
+};
+
+export const StyledLink = ({
   children,
   href,
   target,
@@ -10,7 +34,7 @@ export default function StyledLink({
   href: string;
   target?: string;
   className?: string;
-}) {
+}) => {
   return (
     <a
       className={cn(
@@ -23,4 +47,4 @@ export default function StyledLink({
       {children}
     </a>
   );
-}
+};

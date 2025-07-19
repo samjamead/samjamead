@@ -34,7 +34,7 @@ export default function LineNumbers({
           <p
             key={i}
             className={cn(
-              "text-muted-foreground font-mono nth-10:text-yellow-300",
+              "text-muted-foreground font-mono [&:nth-child(10n)]:text-yellow-300",
               leading,
             )}
           >
