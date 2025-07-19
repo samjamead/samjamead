@@ -1,3 +1,4 @@
+import LineNumbers from "@/components/line-numbers";
 import StyledLink from "@/components/styled-link";
 import { cn } from "@/lib/cn";
 
@@ -20,11 +21,21 @@ export default function Home() {
         <h1 className="font-mono text-4xl">sjam.studio</h1>
         <p className="text-muted-foreground">Some little subheading</p>
         <hr />
-        <p>
-          Something about this all just seems right. Imagine, styling your links
-          like some <StyledLink href="/">cool thing</StyledLink>, while down
-          here, a little thing does <em>that</em>. It's a stinger!
-        </p>
+        <LineNumbers lineHeight={1.5}>
+          <p>
+            Something about this all just seems right. Imagine, styling your
+            links like some <StyledLink href="/">cool thing</StyledLink>, while
+            down here, a little thing does <em>that</em>. It's a stinger!
+          </p>
+          <p>
+            And to think you can do it all with just a little bit of maths! Not
+            bad... not bad at all, actually.
+          </p>
+          <p>
+            oKeh! Time to finish this for now and make a picnic. There's a
+            longest glide to be glid!
+          </p>
+        </LineNumbers>
       </div>
     </main>
   );
