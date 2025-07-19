@@ -28,13 +28,13 @@ export default function LineNumbers({
   }, [children]);
 
   return (
-    <div className={cn("-ml-20 flex", className)}>
-      <div className="w-20 shrink-0 bg-yellow-500/10 pr-8 text-right select-none">
+    <div className={cn("-ml-16 flex", className)}>
+      <div className="w-16 shrink-0 pr-6 text-right select-none">
         {Array.from({ length: lineCount }, (_, i) => (
           <p
             key={i}
             className={cn(
-              "text-muted-foreground align-middle font-mono",
+              "text-muted-foreground font-mono nth-10:text-yellow-300",
               leading,
             )}
           >
@@ -42,7 +42,11 @@ export default function LineNumbers({
           </p>
         ))}
       </div>
-      <div ref={contentRef} className="flex flex-col" style={{ gap: spaceY }}>
+      <div
+        ref={contentRef}
+        className="flex flex-col"
+        style={{ gap: spaceY, lineHeight: `${lineHeight}em` }}
+      >
         {children}
       </div>
     </div>

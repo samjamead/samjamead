@@ -11,27 +11,39 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex h-full w-full flex-col items-center justify-center">
-      <div className="bg-background space-y-4 md:w-md">
+    <main className="bg-background flex h-full w-full justify-center pt-8 md:pt-40">
+      <div className="space-y-4 md:w-lg">
         <div className="flex flex-row gap-2">
           {swatches.map((swatch) => (
             <div key={swatch} className={cn("h-4 w-4 rounded-sm", swatch)} />
           ))}
         </div>
-        <h1 className="font-mono text-4xl">sjam.studio</h1>
-        <p className="text-muted-foreground">Some little subheading</p>
-        <hr />
-        <LineNumbers lineHeight={1.5}>
+        <LineNumbers className="font-mono" lineHeight={1.5}>
+          <h1>
+            <span className="text-muted-foreground">
+              // some little subheading
+            </span>
+            <br />
+            sjam.studio
+          </h1>
           <p>
             Something about this all just seems right. Imagine, styling your
             links like some <StyledLink href="/">cool thing</StyledLink>, while
             down here, a little thing does <em>that</em>. It's a stinger!
           </p>
           <p>
+            <span className="text-muted-foreground">
+              // some little subheading
+            </span>
+            <br />
             And to think you can do it all with just a little bit of maths! Not
             bad... not bad at all, actually.
           </p>
           <p>
+            <span className="text-muted-foreground">
+              // some little subheading
+            </span>
+            <br />
             oKeh! Time to finish this for now and make a picnic. There's a
             longest glide to be glid!
           </p>
