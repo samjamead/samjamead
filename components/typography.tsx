@@ -1,15 +1,5 @@
 import { cn } from "@/lib/cn";
 
-export const InlineHeading = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return <span className={cn("text-fuchsia-300", className)}>{children}</span>;
-};
-
 export const InlineComment = ({
   children,
   className,

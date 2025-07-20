@@ -4,18 +4,19 @@
 @theme {
   --font-sans: Helvetica, "Helvetica-Neue", Arial sans-serif;
   --font-mono: "Spline Sans Mono", monospace;
+  --color-background: #171717;
   --color-muted-foreground: #888888;
 }
 
 :root {
-  --background: #171717;
+  --background: var(--color-background);
   --foreground: #ffffff;
   font-family: var(--font-sans);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #171717;
+    --background: var(--color-background);
     --foreground: #ffffff;
   }
 }

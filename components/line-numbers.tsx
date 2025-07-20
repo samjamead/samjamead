@@ -28,8 +28,8 @@ export default function LineNumbers({
   }, [children]);
 
   return (
-    <div className={cn("-ml-16 flex", className)}>
-      <div className="w-16 shrink-0 pr-6 text-right select-none">
+    <div className={cn("flex gap-6", className)}>
+      <div className="w-6 shrink-0 text-right select-none">
         {Array.from({ length: lineCount }, (_, i) => (
           <p
             key={i}

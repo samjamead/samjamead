@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "sjam.studio",
@@ -13,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-roboto antialiased">{children}</body>
+      <body className="font-roboto bg-background antialiased">
+        <div className="mx-auto max-w-lg pt-[calc(100svh*0.25)] pr-2 sm:pr-0">
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }
