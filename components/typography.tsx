@@ -1,6 +1,6 @@
 import { cn } from "@/lib/cn";
 
-export const InlineComment = ({
+export const Heading1 = ({
   children,
   className,
 }: {
@@ -8,7 +8,56 @@ export const InlineComment = ({
   className?: string;
 }) => {
   return (
-    <span className={cn("font-medium text-emerald-300/90", className)}>
+    <h1
+      className={cn(
+        "font-medium text-purple-300 before:pr-1.5 before:content-['#']",
+        className,
+      )}
+    >
+      {children}
+      <br />
+      <br />
+      <br />
+    </h1>
+  );
+};
+
+export const Heading2 = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div>
+      <br />
+      <h2
+        className={cn(
+          "font-medium text-emerald-300 before:pr-1.5 before:content-['##']",
+          className,
+        )}
+      >
+        {children}
+      </h2>
+    </div>
+  );
+};
+
+export const Comment = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <span
+      className={cn(
+        "font-medium text-emerald-300/90 before:pr-1.5 before:content-['//']",
+        className,
+      )}
+    >
       {children}
     </span>
   );
