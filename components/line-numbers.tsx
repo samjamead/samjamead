@@ -28,17 +28,17 @@ export default function LineNumbers({
   }, [children]);
 
   return (
-    <div className={cn("flex gap-6", className)}>
-      <div className="w-6 shrink-0 text-right select-none">
+    <div className={cn("flex gap-4 md:gap-6", className)}>
+      <div className="shrink text-right select-none">
         {Array.from({ length: lineCount }, (_, i) => (
           <p
             key={i}
             className={cn(
-              "text-muted-foreground font-mono [&:nth-child(10n)]:text-yellow-300",
+              "text-muted-foreground/75 md:text-muted-foreground pl-1 font-mono md:pl-0 [&:nth-child(10n)]:text-yellow-300",
               leading,
             )}
           >
-            {i + 1}
+            {String(i + 1).padStart(lineCount > 100 ? 3 : 2, "0")}
           </p>
         ))}
       </div>

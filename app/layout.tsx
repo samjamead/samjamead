@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-roboto bg-background antialiased">
-        <div className="mx-auto max-w-lg pt-[calc(100svh*0.25)] pr-2 sm:pr-0">
+        <div className="mx-auto max-w-lg pr-4 sm:pr-0 md:pt-[calc(100svh*0.25)]">
           {children}
         </div>
         <Footer />
