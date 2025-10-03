@@ -25,6 +25,44 @@ export default function Home() {
           .
         </p>
 
+        <p>
+          Here are a few short excerpts that will give you an idea of my
+          personal philosophy:
+        </p>
+
+        <Heading2>Muddy Road</Heading2>
+        <p>
+          Tanzan and Ekido were once traveling together down a muddy road. A
+          heavy rain was still falling. Coming around a bend, they met a lovely
+          girl in a silk kimono and sash, unable to cross the intersection.
+          "Come on, girl," said Tanzan at once. Lifting her in his arms, he
+          carried her over the mud. Ekido did not speak again until that night
+          when they reached a lodging temple. Then he could no longer restrain
+          himself. "We monks don't go near females," he told Tanzan, "especially
+          not young and lovely ones. It is dangerous. Why did you do that?" "I
+          left the girl there," said Tanzan. "Are you still carrying her?”
+        </p>
+
+        <Heading2>
+          Samuel Vimes' 'Boots' theory of socioeconomic unfairness
+        </Heading2>
+        <p>
+          The reason that the rich were so rich, Vimes reasoned, was because
+          they managed to spend less money. Take boots, for example. He earned
+          thirty-eight dollars a month plus allowances. A really good pair of
+          leather boots cost fifty dollars. But an affordable pair of boots,
+          which were sort of OK for a season or two and then leaked like hell
+          when the cardboard gave out, cost about ten dollars. Those were the
+          kind of boots Vimes always bought, and wore until the soles were so
+          thin that he could tell where he was in Ankh-Morpork on a foggy night
+          by the feel of the cobbles. But the thing was that good boots lasted
+          for years and years. A man who could afford fifty dollars had a pair
+          of boots that'd still be keeping his feet dry in ten years' time,
+          while a poor man who could only afford cheap boots would have spent a
+          hundred dollars on boots in the same time and would still have wet
+          feet.
+        </p>
+
         <Heading2>A short excerpt from Stickeen</Heading2>
         <p>
           But poor Stickeen, the wee, hairy, sleekit beastie, think of him! When
